@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Table</title>
+  <script src="api.js"></script>
+</head>
+<style>
+  .outerDiv {
+    padding: 10px;
+    background-color: brown;
+  }
+
+  .inputField {
+    width: 80%;
+    height: 40px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    background-color: darkgoldenrod;
+    border: none;
+    color: black;
+    font-size: 20px;
+  }
+
+  body {
+    background: #f7f6f6;
+  }
+
+  .stepper {
+    display: flex;
+    margin: 100px;
+    padding: 0;
+    width: 60rem;
+    list-style: none;
+    position: relative;
+  }
+
+  .stepper:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    content: "";
+    width: calc(100% - 20px);
+    background: #e7e7e7;
+  }
+
+
+  .stepper__item {
+    flex: 100%;
+    padding: 20px 20px 20px 40px;
+    background: #3d857e;
+    margin: 0 0 0 -19px;
+    -webkit-clip-path: polygon(20px 50%, 0% 0%, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 0% 100%);
+
+
+  }
+
+  .current {
+    background: red;
+    font-weight: bold;
+  }
+
+  .stepper__item .complete {
+    background: #3d857e
+  }
+
+  .stepper__item:first-child {
+    padding: 20px;
+    -webkit-clip-path: polygon(0% 0%, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 0% 100%);
+  }
+</style>
+
+<body>
+  <div class="outerDiv">
+    <input placeholder="Enter the value" class="inputField" />
+    <button type="submit" class="btn">Submit</button>
+    <button type="submit" id="btn" class="btn">Your Button</button>
+
+  </div>
+  <div class="outerDiv" id="content">
+Test
+  </div>
+
+
+  <ul class="stepper">
+    <li class="stepper__item complete">Step 1</li>
+    <li class="stepper__item current">Step 2</li>
+    <li class="stepper__item">Step 3</li>
+    <li class="stepper__item">Step 4</li>
+  </ul>
+
+</body>
+
+</html>

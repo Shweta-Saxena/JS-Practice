@@ -1,0 +1,23 @@
+String :-
+concat
+indexOf()
+includes
+lastIndexOf()
+match
+matchAll()
+slice
+trim
+
+
+Array :- 
+slice
+splice
+Map 
+Filter
+reduce
+includes
+indexOf
+join
+slice
+splice
+keys

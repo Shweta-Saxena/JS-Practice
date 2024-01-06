@@ -1,0 +1,163 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+        How to make make a div stick to  
+      the top of the screen once it’s  
+      been scrolled to? 
+    </title> 
+    <style> 
+        .sticky-div { 
+            background-color: green; 
+            position: relative; 
+            width: 100%; 
+            padding: 10px 0px; 
+        } 
+          
+        .start { 
+            height: 100px; 
+        } 
+          
+        .end { 
+            height: 500px; 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+    <h1 style="color: green"> 
+    GeeksforGeeks 
+  </h1> 
+    <b> 
+    How to make make a div stick 
+    to the top of the screen once 
+    it’s been scrolled to? 
+  </b> 
+    <p class="start"> 
+        A Computer Science portal for geeks. 
+      It contains well written, well thought 
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company  
+      interview Questions. 
+    </p> 
+    <div class="sticky-div"> 
+        This is div will stick to the top when it has been scrolled past 
+    </div> 
+    <p class="end"> 
+        A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. 
+      A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. 
+    </p> 
+    <p class="end"> 
+        A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. 
+      A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. 
+    </p> 
+    <p class="end"> 
+        A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. 
+      A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. A Computer Science portal for geeks.  
+      It contains well written, well thought  
+      and well explained computer science and 
+      programming articles, quizzes and  
+      practice/competitive programming/company 
+      interview Questions. 
+    </p> 
+    <script> 
+        stickyElem = 
+            document.querySelector(".sticky-div"); 
+  
+        /* Gets the amount of height 
+        of the element from the 
+        viewport and adds the 
+        pageYOffset to get the height 
+        relative to the page */ 
+        currStickyPos =  
+          stickyElem.getBoundingClientRect().top + window.pageYOffset; 
+  
+        window.onscroll = function() { 
+  
+            /* Check if the current Y offset 
+            is greater than the position of 
+            the element */ 
+            if (window.pageYOffset > currStickyPos) { 
+                stickyElem.style.position = "fixed"; 
+                stickyElem.style.top = "0px"; 
+            } else { 
+                stickyElem.style.position = "relative"; 
+                stickyElem.style.top = "initial"; 
+            } 
+        } 
+    </script> 
+</body> 
+  
+</html> 
